@@ -17,24 +17,27 @@ async function scrapeIndex(jsonFileUrl) {
     // Navigate to the JSON file URL
     await page.goto(jsonFileUrl);
 
-    // Get the HTML content after being processed by JavaScript
     const processedHtml = await page.evaluate(() => document.body.innerHTML);
 
-    // Use Cheerio to parse the processed HTML
     const $ = cheerio.load(processedHtml);
 
-    // Select the <pre> element and extract its text content
     const preContent = $('body > pre').text();
 
-    // Parse the JSON content
     const jsonData = JSON.parse(preContent);
-     const indexData = jsonData.data
-    console.log(jsonData.data);
 
-    // Access the data within the JSON object
+     const indexData = jsonData.data
+    //  console.log(jsonData.data);
+    // if(indexData.data.length > 0){
+    //   return {
+    //       success:true,
+    //       data:fs.readFileSync(jsonOutputPath)
+    //   }
+      
+    // }
+
     const retailPrice = indexData.retail_price;
 
-    console.log('Retail Price:', retailPrice);
+    // console.log('Retail Price:', retailPrice);
     await browser.close();
 
     return indexData
@@ -72,8 +75,6 @@ async function scrapeBrands(jsonFileUrl) {
 
 
     const brandSlug = $(row).attr('href')
-
-    console.log(imageUrl)
 
 		const payload = {
 			brandName,
