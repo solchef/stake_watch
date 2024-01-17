@@ -15,7 +15,7 @@ app.get('/market-index', async (req, res) => {
 
       const jsonOutputPath = "market_index.json";
 
-        if (data.length > 0) {
+        if (data) {
           // Read the existing JSON file only if there's no new data to write
           
          res.json([{ success: true, data }]);
