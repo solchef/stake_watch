@@ -1,0 +1,25 @@
+{
+  "name": "scraper",
+  "version": "1.0.0",
+  "description": "der",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "cheerio": "^1.0.0-rc.12",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "googleapis": "^130.0.0",
+    "nodemon": "^3.0.2",
+    "path": "^0.12.7",
+    "puppeteer": "^21.7.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

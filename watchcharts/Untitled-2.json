@@ -1,0 +1,770 @@
+[
+  {
+    "brandName": "Rolex",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/rolex",
+    "subBrands": []
+  },
+  {
+    "brandName": "Omega",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/omega",
+    "subBrands": []
+  },
+  {
+    "brandName": "Seiko",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/seiko",
+    "subBrands": []
+  },
+  {
+    "brandName": "TAG Heuer",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/tag+heuer",
+    "subBrands": []
+  },
+  {
+    "brandName": "Breitling",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/breitling",
+    "subBrands": []
+  },
+  {
+    "brandName": "Casio",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/casio",
+    "subBrands": []
+  },
+  {
+    "brandName": "Tudor",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/tudor",
+    "subBrands": []
+  },
+  {
+    "brandName": "Swatch",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/swatch",
+    "subBrands": []
+  },
+  {
+    "brandName": "Panerai",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/panerai",
+    "subBrands": []
+  },
+  {
+    "brandName": "IWC",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/iwc",
+    "subBrands": []
+  },
+  {
+    "brandName": "Citizen",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/citizen",
+    "subBrands": []
+  },
+  {
+    "brandName": "Audemars Piguet",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/audemars+piguet",
+    "subBrands": []
+  },
+  {
+    "brandName": "Patek Philippe",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/patek+philippe",
+    "subBrands": []
+  },
+  {
+    "brandName": "Cartier",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/cartier",
+    "subBrands": []
+  },
+  {
+    "brandName": "Tissot",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/tissot",
+    "subBrands": []
+  },
+  {
+    "brandName": "Longines",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/longines",
+    "subBrands": []
+  },
+  {
+    "brandName": "Bulova",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/bulova",
+    "subBrands": []
+  },
+  {
+    "brandName": "Hamilton",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/hamilton",
+    "subBrands": []
+  },
+  {
+    "brandName": "Oris",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/oris",
+    "subBrands": []
+  },
+  {
+    "brandName": "Hublot",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/hublot",
+    "subBrands": []
+  },
+  {
+    "brandName": "Grand Seiko",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/grand+seiko",
+    "subBrands": []
+  },
+  {
+    "brandName": "Zenith",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/zenith",
+    "subBrands": []
+  },
+  {
+    "brandName": "Jaeger-LeCoultre",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/jaeger-lecoultre",
+    "subBrands": []
+  },
+  {
+    "brandName": "Vacheron Constantin",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/vacheron+constantin",
+    "subBrands": []
+  },
+  {
+    "brandName": "Nomos",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/nomos",
+    "subBrands": []
+  },
+  {
+    "brandName": "Mido",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/mido",
+    "subBrands": []
+  },
+  {
+    "brandName": "A. Lange & Söhne",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/a.+lange+%26+s%c3%b6hne",
+    "subBrands": []
+  },
+  {
+    "brandName": "Blancpain",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/blancpain",
+    "subBrands": []
+  },
+  {
+    "brandName": "Breguet",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/breguet",
+    "subBrands": []
+  },
+  {
+    "brandName": "Girard-Perregaux",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/girard-perregaux",
+    "subBrands": []
+  },
+  {
+    "brandName": "Glycine",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/glycine",
+    "subBrands": []
+  },
+  {
+    "brandName": "Glashütte Original",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/glash%c3%bctte+original",
+    "subBrands": []
+  },
+  {
+    "brandName": "Montblanc",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/montblanc",
+    "subBrands": []
+  },
+  {
+    "brandName": "Chopard",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/chopard",
+    "subBrands": []
+  },
+  {
+    "brandName": "Bell & Ross",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/bell+%26+ross",
+    "subBrands": []
+  },
+  {
+    "brandName": "BVLGARI",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/bvlgari",
+    "subBrands": []
+  },
+  {
+    "brandName": "Ulysse Nardin",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/ulysse+nardin",
+    "subBrands": []
+  },
+  {
+    "brandName": "Ball",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/ball",
+    "subBrands": []
+  },
+  {
+    "brandName": "Frederique Constant",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/frederique+constant",
+    "subBrands": []
+  },
+  {
+    "brandName": "Rado",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/rado",
+    "subBrands": []
+  },
+  {
+    "brandName": "Sinn",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/sinn",
+    "subBrands": []
+  },
+  {
+    "brandName": "H. Moser & Cie",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/h.+moser+%26+cie",
+    "subBrands": []
+  },
+  {
+    "brandName": "Laco",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/laco",
+    "subBrands": []
+  },
+  {
+    "brandName": "Piaget",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/piaget",
+    "subBrands": []
+  },
+  {
+    "brandName": "Certina",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/certina",
+    "subBrands": []
+  },
+  {
+    "brandName": "Junghans",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/junghans",
+    "subBrands": []
+  },
+  {
+    "brandName": "Accutron",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/accutron",
+    "subBrands": []
+  },
+  {
+    "brandName": "Parmigiani Fleurier",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/parmigiani+fleurier",
+    "subBrands": []
+  },
+  {
+    "brandName": "Damasko",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/damasko",
+    "subBrands": []
+  },
+  {
+    "brandName": "Ming",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/ming",
+    "subBrands": []
+  },
+  {
+    "brandName": "Orient",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/orient",
+    "subBrands": []
+  },
+  {
+    "brandName": "Deep Blue",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/deep+blue",
+    "subBrands": []
+  },
+  {
+    "brandName": "DOXA",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/doxa",
+    "subBrands": []
+  },
+  {
+    "brandName": "Eterna",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/eterna",
+    "subBrands": []
+  },
+  {
+    "brandName": "Graf Zeppelin",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/graf+zeppelin",
+    "subBrands": []
+  },
+  {
+    "brandName": "Timex",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/timex",
+    "subBrands": []
+  },
+  {
+    "brandName": "Baume & Mercier",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/baume+%26+mercier",
+    "subBrands": []
+  },
+  {
+    "brandName": "MeisterSinger",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/meistersinger",
+    "subBrands": []
+  },
+  {
+    "brandName": "Steinhart",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/steinhart",
+    "subBrands": []
+  },
+  {
+    "brandName": "Heuer",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/heuer",
+    "subBrands": []
+  },
+  {
+    "brandName": "Marathon",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/marathon",
+    "subBrands": []
+  },
+  {
+    "brandName": "Gérald Genta",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/g%c3%a9rald+genta",
+    "subBrands": []
+  },
+  {
+    "brandName": "Squale",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/squale",
+    "subBrands": []
+  },
+  {
+    "brandName": "Richard Mille",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/richard+mille",
+    "subBrands": []
+  },
+  {
+    "brandName": "Luminox",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/luminox",
+    "subBrands": []
+  },
+  {
+    "brandName": "Raven",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/raven",
+    "subBrands": []
+  },
+  {
+    "brandName": "Zodiac",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/zodiac",
+    "subBrands": []
+  },
+  {
+    "brandName": "Raymond Weil",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/raymond+weil",
+    "subBrands": []
+  },
+  {
+    "brandName": "Alpina",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/alpina",
+    "subBrands": []
+  },
+  {
+    "brandName": "Vostok",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/vostok",
+    "subBrands": []
+  },
+  {
+    "brandName": "Fossil",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/fossil",
+    "subBrands": []
+  },
+  {
+    "brandName": "Invicta",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/invicta",
+    "subBrands": []
+  },
+  {
+    "brandName": "San Martin",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/san+martin",
+    "subBrands": []
+  },
+  {
+    "brandName": "Christopher Ward",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/christopher+ward",
+    "subBrands": []
+  },
+  {
+    "brandName": "Zelos",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/zelos",
+    "subBrands": []
+  },
+  {
+    "brandName": "Mondaine",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/mondaine",
+    "subBrands": []
+  },
+  {
+    "brandName": "Junkers",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/junkers",
+    "subBrands": []
+  },
+  {
+    "brandName": "Credor",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/credor",
+    "subBrands": []
+  },
+  {
+    "brandName": "Franck Muller",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/franck+muller",
+    "subBrands": []
+  },
+  {
+    "brandName": "Sea-Gull",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/sea-gull",
+    "subBrands": []
+  },
+  {
+    "brandName": "Borealis",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/borealis",
+    "subBrands": []
+  },
+  {
+    "brandName": "Victorinox",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/victorinox",
+    "subBrands": []
+  },
+  {
+    "brandName": "FORTIS",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/fortis",
+    "subBrands": []
+  },
+  {
+    "brandName": "Baltic",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/baltic",
+    "subBrands": []
+  },
+  {
+    "brandName": "Yema",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/yema",
+    "subBrands": []
+  },
+  {
+    "brandName": "Autodromo",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/autodromo",
+    "subBrands": []
+  },
+  {
+    "brandName": "Universal Genève",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/universal+gen%c3%a8ve",
+    "subBrands": []
+  },
+  {
+    "brandName": "Dan Henry",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/dan+henry",
+    "subBrands": []
+  },
+  {
+    "brandName": "Gucci",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/gucci",
+    "subBrands": []
+  },
+  {
+    "brandName": "Halios",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/halios",
+    "subBrands": []
+  },
+  {
+    "brandName": "Apple",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/apple",
+    "subBrands": []
+  },
+  {
+    "brandName": "Ebel",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/ebel",
+    "subBrands": []
+  },
+  {
+    "brandName": "Unimatic",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/unimatic",
+    "subBrands": []
+  },
+  {
+    "brandName": "Bremont",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/bremont",
+    "subBrands": []
+  },
+  {
+    "brandName": "Nodus",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/nodus",
+    "subBrands": []
+  },
+  {
+    "brandName": "SEVENFRIDAY",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/sevenfriday",
+    "subBrands": []
+  },
+  {
+    "brandName": "Kurono Tokyo",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/kurono+tokyo",
+    "subBrands": []
+  },
+  {
+    "brandName": "Hermès",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/herm%c3%a8s",
+    "subBrands": []
+  },
+  {
+    "brandName": "Boldr",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/boldr",
+    "subBrands": []
+  },
+  {
+    "brandName": "Corum",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/corum",
+    "subBrands": []
+  },
+  {
+    "brandName": "Louis Vuitton",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/louis+vuitton",
+    "subBrands": []
+  },
+  {
+    "brandName": "Lum-Tec",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/lum-tec",
+    "subBrands": []
+  },
+  {
+    "brandName": "Magrette",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/magrette",
+    "subBrands": []
+  },
+  {
+    "brandName": "Carl F. Bucherer",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/carl+f.+bucherer",
+    "subBrands": []
+  },
+  {
+    "brandName": "Maurice Lacroix",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/maurice+lacroix",
+    "subBrands": []
+  },
+  {
+    "brandName": "anOrdain",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/anordain",
+    "subBrands": []
+  },
+  {
+    "brandName": "MB&F",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/mb%26f",
+    "subBrands": []
+  },
+  {
+    "brandName": "Chronoswiss",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/chronoswiss",
+    "subBrands": []
+  },
+  {
+    "brandName": "Undone",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/undone",
+    "subBrands": []
+  },
+  {
+    "brandName": "Concord",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/concord",
+    "subBrands": []
+  },
+  {
+    "brandName": "Mercer",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/mercer",
+    "subBrands": []
+  },
+  {
+    "brandName": "Archimede",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/archimede",
+    "subBrands": []
+  },
+  {
+    "brandName": "Farer",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/farer",
+    "subBrands": []
+  },
+  {
+    "brandName": "TechnoMarine",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/technomarine",
+    "subBrands": []
+  },
+  {
+    "brandName": "Formex",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/formex",
+    "subBrands": []
+  },
+  {
+    "brandName": "AVI-8",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/avi-8",
+    "subBrands": []
+  },
+  {
+    "brandName": "Stowa",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/stowa",
+    "subBrands": []
+  },
+  {
+    "brandName": "Monta",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/monta",
+    "subBrands": []
+  },
+  {
+    "brandName": "Czapek",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/czapek",
+    "subBrands": []
+  },
+  {
+    "brandName": "Spinnaker",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/spinnaker",
+    "subBrands": []
+  },
+  {
+    "brandName": "Movado",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/movado",
+    "subBrands": []
+  },
+  {
+    "brandName": "Norqain",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/norqain",
+    "subBrands": []
+  },
+  {
+    "brandName": "Daniel Roth",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/daniel+roth",
+    "subBrands": []
+  },
+  {
+    "brandName": "Oak & Oscar",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/oak+%26+oscar",
+    "subBrands": []
+  },
+  {
+    "brandName": "Gruppo Gamma",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/gruppo+gamma",
+    "subBrands": []
+  },
+  {
+    "brandName": "Roger Dubuis",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/roger+dubuis",
+    "subBrands": []
+  },
+  {
+    "brandName": "Chanel",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/chanel",
+    "subBrands": []
+  },
+  {
+    "brandName": "F. P. Journe",
+    "imageUrl": "https://cdn.watchcharts.com/brands/73a5e99a-6990-4ab4-8b41-3161fd925250",
+    "brandSlug": "/watches/brand/f.+p.+journe",
+    "subBrands": []
+  }
+]

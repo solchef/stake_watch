@@ -1,0 +1,101 @@
+{
+    "product": {
+        "product": {
+            "productName": "Patek Philippe Nautilus 5711 Stainless Steel (5711/1A)",
+            "retailPrice": "$91,272",
+            "marketPrice": "$104,178",
+            "numberOfSales": "Not Available",
+            "marketRange": "High",
+            "volatility": "Low",
+            "status": "Discontinued Model",
+            "mainImage": "https://cdn.watchcharts.com/removebg/b95e64e9-604a-489d-bd7e-33b0edf84cb1.png?d=600x600",
+            "variationImages": [
+                "https://cdn.watchcharts.com/removebg/37281c03-dc22-4526-9c4c-f6dd85176eac.png?d=150x150",
+                "https://cdn.watchcharts.com/removebg/1e8ffe76-98c9-443c-861d-c9067637f0a9.png?d=150x150",
+                "https://cdn.watchcharts.com/removebg/3e636ff8-4edd-49a4-8ab6-6b2d9334a0c7.png?d=150x150",
+                "https://cdn.watchcharts.com/removebg/80e5859e-fc1f-40a9-a9ef-53e68966f5e5.png?d=150x150",
+                "https://cdn.watchcharts.com/removebg/803dd1b8-265e-4f3e-a0d0-22b3e3d3e3f0.png?d=150x150"
+            ]
+        },
+        "variations": [
+            {
+                "model": "5711/1A-018",
+                "price": "$2,580,074"
+            },
+            {
+                "model": "5711/1A-014",
+                "price": "$246,095 (Green)"
+            },
+            {
+                "model": "5711/1A-010",
+                "price": "$91,949"
+            },
+            {
+                "model": "5711/1A-011",
+                "price": "$87,501 (Silver)"
+            },
+            {
+                "model": "5711/1A-001",
+                "price": "$92,817"
+            }
+        ],
+        "additionalInfo": "The Patek Philippe 5711/1A is a watch model from the Patek Philippe brand and Nautilus collection. As of January 2024, the average price of the Patek Philippe Nautilus 5711 Stainless Steel (5711/1A) on the private sales market is $91,272, while you can expect to pay $104,178 from a secondary market dealer.",
+        "tables": [
+            {
+                "tableCategory": "Table Category 1",
+                "tableHeaders": [
+                    "Header 1",
+                    "Header 2",
+                    "Header 3"
+                ],
+                "tableRows": [
+                    [
+                        "Row 1-1",
+                        "Row 1-2",
+                        "Row 1-3"
+                    ],
+                    [
+                        "Row 2-1",
+                        "Row 2-2",
+                        "Row 2-3"
+                    ]
+                ]
+            },
+            {
+                "tableCategory": "Table Category 2",
+                "tableHeaders": [
+                    "Header A",
+                    "Header B",
+                    "Header C"
+                ],
+                "tableRows": [
+                    [
+                        "Row A-1",
+                        "Row A-2",
+                        "Row A-3"
+                    ],
+                    [
+                        "Row B-1",
+                        "Row B-2",
+                        "Row B-3"
+                    ]
+                ]
+            }
+        ],
+        "faqItems": [
+            {
+                "question": "FAQ Question 1",
+                "answer": "FAQ Answer 1"
+            },
+            {
+                "question": "FAQ Question 2",
+                "answer": "FAQ Answer 2"
+            }
+        ],
+        "descriptions": [
+            "Description 1",
+            "Description 2",
+            "Description 3"
+        ]
+    }
+}
