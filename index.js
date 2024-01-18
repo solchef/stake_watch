@@ -80,7 +80,7 @@ app.get("/get-brands", async (req, res) => {
 	try {
 		const response = await axios.request(options);
 		console.log(response);
-    res.json(response.data);
+    res.json([response.data]);
 	} catch (error) {
 		console.error(error);
 	}
@@ -102,8 +102,8 @@ app.get("/get-models", async (req, res) => {
 
 	try {
 		const response = await axios.request(options);
-		console.log(response);
-    res.json(response.data);
+		// console.log(response);
+    res.json([response.data]);
 	} catch (error) {
 		console.error(error);
 	}
@@ -123,7 +123,7 @@ app.get("/get-perfomance-index", async (req, res) => {
   try {
 		const response = await axios.request(options);
 		// console.log(response);
-    res.json(response.data);
+    res.json([response.data]);
 	} catch (error) {
 		console.error(error);
 	}
