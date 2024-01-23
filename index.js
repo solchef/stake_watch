@@ -7,9 +7,15 @@ const {
 	scrapeIndex,
 	scrapeCollections,
 } = require("./watchcharts/scraping");
+const brands = require("./brands");
 
 // Create an Express application
 const app = express();
+
+app.get("/", async (req, res) => {
+
+	console.log("yalla")
+})
 
 app.get("/market-index", async (req, res) => {
 	try {
@@ -68,19 +74,22 @@ app.get("/collections", async (req, res) => {
 });
 
 app.get("/get-brands", async (req, res) => {
-	const options = {
-		method: "GET",
-		url: "https://chrono241.p.rapidapi.com/brands",
-		headers: {
-			"X-RapidAPI-Key": "be31f8812bmshaf5a1e9248a26f6p1aec23jsn676eaede7a19",
-			"X-RapidAPI-Host": "chrono241.p.rapidapi.com",
-		},
-	};
+	// const options = {
+	// 	method: "GET",
+	// 	url: "https://chrono241.p.rapidapi.com/brands",
+	// 	headers: {
+	// 		"X-RapidAPI-Key": "be31f8812bmshaf5a1e9248a26f6p1aec23jsn676eaede7a19",
+	// 		"X-RapidAPI-Host": "chrono241.p.rapidapi.com",
+	// 	},
+	// };
+
+	const response = brands;
+		// console.log(response);
 
 	try {
-		const response = await axios.request(options);
-		console.log(response);
-    res.json([response.data]);
+		// const response = await axios.request(options);
+		// console.log(response);
+    res.json(response);
 	} catch (error) {
 		console.error(error);
 	}
