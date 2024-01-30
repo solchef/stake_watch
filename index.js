@@ -8,18 +8,32 @@ const {
 	scrapeCollections,
 } = require("./watchcharts/scraping");
 const brands = require("./brands");
-
+const marketIndexes = require("./services/overall-indexes");
 // Create an Express application
 const app = express();
 
 app.get("/", async (req, res) => {
 
-	console.log("yalla")
+	res.json({ success: true, message: "You are at Stakewatch API''s" });
 })
 
+app.get("/getMarketIndexingSummary", async (req, res) => {
+	const type = req.query.page;
+	//deduce queries
+	//console.log(marketIndexes)
+	  try {
+
+		res.json([marketIndexes]);
+
+	  } catch (error) {
+		  console.error(error);
+	  }
+  });
+
+  
 app.get("/market-index", async (req, res) => {
 	try {
-		const jsonFileUrl = "https://watchcharts.com/charts/brand.json"; // Replace with the actual URL
+		const jsonFileUrl = "";
 		const data = await scrapeIndex(jsonFileUrl);
 
 		const jsonOutputPath = "market_index.json";
@@ -87,8 +101,6 @@ app.get("/get-brands", async (req, res) => {
 		// console.log(response);
 
 	try {
-		// const response = await axios.request(options);
-		// console.log(response);
     res.json(response);
 	} catch (error) {
 		console.error(error);
@@ -118,6 +130,8 @@ app.get("/get-models", async (req, res) => {
 	}
 });
 
+
+
 app.get("/get-perfomance-index", async (req, res) => {
 
   const options = {
@@ -138,12 +152,6 @@ app.get("/get-perfomance-index", async (req, res) => {
 	}
       
 });
-
-
-
-
-
-
 
 
 const port = 3002;

@@ -12,7 +12,6 @@ const brandScrapeUrl = "https://watchcharts.com/watches/brand_index/patek+philip
 async function scrapeIndex() {
 	const brand = "rolex";
 	const pages = 1;
-
   const browser = await puppeteer.launch({headless: true})
   const page = await browser.newPage();
   // Set cookies
@@ -24,7 +23,7 @@ async function scrapeIndex() {
 
 // Verify cookies have been set
 const cookies = await page.cookies();
-console.log(cookies);
+// console.log(cookies);
 
 await page.setCookie(...cookies);
 
@@ -189,6 +188,6 @@ const scrapeTaxonomies = {
 	scrapeCollections,
 };
 
-// module.exports = scrapeTaxonomies;
+module.exports = scrapeTaxonomies;
 
-scrapeIndex();
+// scrapeIndex();

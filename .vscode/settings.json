@@ -1,0 +1,12 @@
+{
+    "python.analysis.extraPaths": [
+        "/Users/jawiwy/.vscode/extensions/continue.continue-0.8.1-darwin-x64",
+        "/home/codespace/.vscode-remote/extensions/continue.continue-0.8.1-linux-x64",
+        "/Users/jawiwy/.vscode/extensions/continue.continue-0.0.412-darwin-x64"
+    ],
+    "python.autoComplete.extraPaths": [
+        "/Users/jawiwy/.vscode/extensions/continue.continue-0.8.1-darwin-x64",
+        "/home/codespace/.vscode-remote/extensions/continue.continue-0.8.1-linux-x64",
+        "/Users/jawiwy/.vscode/extensions/continue.continue-0.0.412-darwin-x64"
+    ]
+}
