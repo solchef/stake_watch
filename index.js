@@ -23,6 +23,21 @@ app.get("/getMarketIndexingSummary", async (req, res) => {
 	// console.log(marketIndexes)
 	  try {
 
+		res.json(marketIndexes);
+
+	  } catch (error) {
+		  console.error(error);
+	  }
+  });
+
+  app.get("/updateMarketIndexingSummary", async (req, res) => {
+	const type = req.query.page;
+	   
+	 const brands = marketIndexes.brandIndexes;
+
+
+	  try {
+
 		res.json([marketIndexes]);
 
 	  } catch (error) {
