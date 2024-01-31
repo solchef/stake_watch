@@ -20,7 +20,7 @@ app.get("/", async (req, res) => {
 app.get("/getMarketIndexingSummary", async (req, res) => {
 	const type = req.query.page;
 	//deduce queries
-	//console.log(marketIndexes)
+	// console.log(marketIndexes)
 	  try {
 
 		res.json([marketIndexes]);
@@ -30,7 +30,7 @@ app.get("/getMarketIndexingSummary", async (req, res) => {
 	  }
   });
 
-  
+
 app.get("/market-index", async (req, res) => {
 	try {
 		const jsonFileUrl = "";

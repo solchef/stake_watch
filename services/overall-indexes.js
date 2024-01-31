@@ -6,12 +6,7 @@
   }
 ];
 
- const brandeIndexes = [
-    {
-      "Title": "Overall Market ",
-      "Title_URL": "https://watchcharts.com/watches/price_index",
-      "w25": "29,609"
-    },
+ const brandIndexes = [
     {
       "Title": "Rolex ",
       "Title_URL": "https://watchcharts.com/watches/brand_index/rolex",
@@ -235,7 +230,7 @@ const priceRangeIndexes = [];
 
 const indexes = {
   overallMarketIndex,
-  brandeIndexes,
+  brandIndexes,
   groupIndexes,
   priceRangeIndexes
 }
