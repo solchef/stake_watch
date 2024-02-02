@@ -10,6 +10,8 @@ const {
 const brands = require("./brands");
 const marketIndexes = require("./services/overall-indexes");
 const overall = require("./services/indexes/overallindex.json");
+const overallModels = require("./services/indexes/overallModels.json");
+
 // Create an Express application
 const app = express();
 
@@ -77,9 +79,18 @@ app.post("/updateMarketIndexingSummary", async (req, res) => {
 
 app.get("/overallPriceHistory", async (req, res) => {
 	try {
-		res.json([overall]);
+		res.json(overall);
 	} catch (error) {}
 });
+
+
+app.get("/getTopModelsIndexes", async (req, res) => {
+	try {
+		
+		res.json(overallModels);
+	} catch (error) {}
+});
+
 
 app.get("/market-index", async (req, res) => {
 	try {
