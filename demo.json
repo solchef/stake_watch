@@ -51,17 +51,3 @@
         "Movement Caliber": "324 s c"
     }
 }
-  // Repeat the above structure for other Breitling models
-  // "Breitling Superocean": { ... },
-  // "Breitling Chrono-Matic": { ... },
-  // "Breitling Premier": { ... },
-  // "Breitling Cockpit": { ... },
-  // "Breitling Colt": { ... },
-  // "Breitling Chronomat": { ... },
-  // "Breitling Avenger": { ... },
-  // "Breitling Windrider": { ... },
-  // "Breitling Chronoliner": { ... },
-  // "Breitling Galactic": { ... },
-  // "Breitling Transocean": { ... }
-
-}

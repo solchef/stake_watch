@@ -1,103 +1,54 @@
 {
-    "Watch Model": "Patek Philippe Nautilus 5711 Stainless Steel (5711/1A)",
-    "Price Guide": "Average price on the private sales market: $91,272",
-    "Retail Price": "$34,890 (as of Dec 2021)",
-    "Market Price": "Pre-owned price estimate: $91,272 (updated 2024-01-15)",
-    "Number of Sales (12M)": 436,
-    "Market Range": "$82,054 - $100,490",
-    "Volatility": 10.1,
-    "Nautilus Variations": [
-      "5711/1A-018",
-      "5711/1A-014",
-      "5711/1A-010",
-      "5711/1A-011",
-      "5711/1A-001"
-    ],
-    "Basic Info": {
-      "Brand": "Patek Philippe",
-      "Collection": "Nautilus",
-      "Reference(s)": [
-        "5711/1A-018",
-        "5711/1A-014",
-        "5711/1A-010",
-        "5711/1A-011",
-        "5711/1A-001"
-      ],
-      "Style": "Dress",
-      "Complications": "Date",
-      "Features": [
-        "Luminous hands",
-        "Luminous indices",
-        "Central seconds",
-        "Screw-down crown",
-        "Luminous numerals",
-        "Display back"
-      ]
-    },
-    "Case": {
-      "Bezel Material": "Steel",
-      "Crystal": "Sapphire crystal",
-      "Case Material": "Steel",
-      "Dial Numerals": "No numerals",
-      "Case Diameter": "40mm",
-      "Dial Color": ["White", "Blue"],
-      "Water Resistance": "120 meters"
-    },
-    "Movement": {
-      "Movement Type": "Automatic",
-      "Frequency": "28800 bph",
-      "Number of Jewels": 29,
-      "Power Reserve": "45 hours",
-      "Movement Caliber": "324 s c"
-    },
-    "Similar Watches": [
-      {
-        "In Production": "Patek Philippe 5740/1G, Nautilus Perpetual Calendar 5740 White Gold",
-        "Retail Price": "$151,400",
-        "Market Price": "$211,677",
-        "Material": "White gold",
-        "Case Diameter": "40mm",
-        "Water Resistance": "60 meters"
-      },
-      {
-        "In Production": "Patek Philippe 5712/1A, Nautilus 5712 Stainless Steel",
-        "Retail Price": "$50,860",
-        "Market Price": "$100,008",
-        "Material": "Steel",
-        "Case Diameter": "40mm",
-        "Water Resistance": "60 meters"
-      },
-      {
-        "In Production": "Patek Philippe 5980/1A, Nautilus 5980",
-        "Retail Price": "~$43,500",
-        "Market Price": "$98,058",
-        "Material": "Steel",
-        "Case Diameter": "40.5mm",
-        "Water Resistance": "120 meters"
-      },
-      {
-        "In Production": "Patek Philippe 5980/1R, Nautilus 5980 Rose Gold",
-        "Retail Price": "$108,820",
-        "Market Price": "$185,718",
-        "Material": "Rose gold",
-        "Case Diameter": "40.5mm",
-        "Water Resistance": "120 meters"
-      },
-      {
-        "In Production": "Patek Philippe 5990/1R, Nautilus Travel Time Rose Gold",
-        "Retail Price": "$118,280",
-        "Market Price": "$253,813",
-        "Material": "Rose gold",
-        "Case Diameter": "40.5mm",
-        "Water Resistance": "100 meters"
-      },
-      {
-        "In Production": "Patek Philippe 5990/1A, Nautilus 5990",
-        "Retail Price": "$68,600",
-        "Market Price": "$125,946",
-        "Material": "Steel",
-        "Case Diameter": "40.5mm",
-        "Water Resistance": "120 meters"
-      }
-    ]
-  }
+	"Watch Model": "Patek Philippe Nautilus 5711 Stainless Steel (5711/1A)",
+	"Price Guide": "Average price on the private sales market: $91,272",
+	"Retail Price": "$34,890 (as of Dec 2021)",
+	"Market Price": "Pre-owned price estimate: $91,272 (updated 2024-01-15)",
+	"Number of Sales (12M)": 436,
+	"Market Range": "$82,054 - $100,490",
+	"Volatility": 10.1,
+	"Nautilus Variations": [
+		"5711/1A-018",
+		"5711/1A-014",
+		"5711/1A-010",
+		"5711/1A-011",
+		"5711/1A-001"
+	],
+	"Basic Info": {
+		"Brand": "Patek Philippe",
+		"Collection": "Nautilus",
+		"Reference(s)": [
+			"5711/1A-018",
+			"5711/1A-014",
+			"5711/1A-010",
+			"5711/1A-011",
+			"5711/1A-001"
+		],
+		"Style": "Dress",
+		"Complications": "Date",
+		"Features": [
+			"Luminous hands",
+			"Luminous indices",
+			"Central seconds",
+			"Screw-down crown",
+			"Luminous numerals",
+			"Display back"
+		]
+	},
+	"Case": {
+		"Bezel Material": "Steel",
+		"Crystal": "Sapphire crystal",
+		"Case Material": "Steel",
+		"Dial Numerals": "No numerals",
+		"Case Diameter": "40mm",
+		"Dial Color": ["White", "Blue"],
+		"Water Resistance": "120 meters"
+	},
+	"Movement": {
+		"Movement Type": "Automatic",
+		"Frequency": "28800 bph",
+		"Number of Jewels": 29,
+		"Power Reserve": "45 hours",
+		"Movement Caliber": "324 s c"
+	}
+}
+

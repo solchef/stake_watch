@@ -1,6 +1,8 @@
 const express = require("express");
 const fs = require("fs");
 const axios = require("axios");
+const puppeteer = require('puppeteer');
+
 
 const {
 	scrapeBrands,
@@ -12,7 +14,6 @@ const marketIndexes = require("./services/overall-indexes");
 const overall = require("./services/indexes/overallindex.json");
 const overallModels = require("./services/indexes/overallModels.json");
 
-// Create an Express application
 const app = express();
 
 const headers = {
@@ -34,6 +35,8 @@ app.get("/getMarketIndexingSummary", async (req, res) => {
 		console.error(error);
 	}
 });
+
+
 
 app.post("/updateMarketIndexingSummary", async (req, res) => {
 	const brandsIndex = marketIndexes.brandIndexes;
@@ -77,18 +80,119 @@ app.post("/updateMarketIndexingSummary", async (req, res) => {
 	}
 });
 
+
+app.get("/getChatAnalysis", async (req, res) => {
+
+	const chartData = req.query.chartData;
+		console.log(chartData);
+		
+		const analyticItams = {
+			"change":{
+				"1m": 0.5,
+				"3m": 0.5,
+				"6m": 0.5,
+			},
+			"aggr":{
+				"1m": 6.5,
+				"3m": 0.5,
+				"6m": 0.5,
+			},
+			}
+
+
+	return analyticItams
+});
+
+
+app.post("/insertModelsAndPrices", async (req, res) => {
+
+	const data =
+	{
+		"parent_id": parent.id,
+		"child_id": children.id,
+		"context": "child",
+		"store_items_type": "replace/update",
+		"meta": {
+			"market_value": 100,
+			"6m_change": 0.5,
+			"group_type": "brands",
+			"type_name": "Rolex",
+			"historical_data": []
+		}
+	}
+
+	let parent = await axios.post('https://stakewatch.dubbydesign.com/wp-json/jet-rel/59', {
+		headers: {
+			'Authorization': 'Basic YXBpdXBkYXRlOjNnSzggVXpjdiBCY2lwIGFYVGogcXFQWCBlQXNk'
+		},
+		data
+
+	}, {
+
+
+	}, {})
+})
+
+
+
+
 app.get("/overallPriceHistory", async (req, res) => {
 	try {
 		res.json(overall);
-	} catch (error) {}
+	} catch (error) { }
+});
+
+
+app.get("/getModelIndexHistory", async (req, res) => {
+	const browser = await puppeteer.launch();
+	const page = await browser.newPage();
+
+	const index = await axios.get()
+
+	// Set user agent and other headers as needed
+	await page.setUserAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:122.0) Gecko/20100101 Firefox/122.0");
+
+	await page.goto("https://watchcharts.com/charts/brand.json", {
+		waitUntil: 'domcontentloaded',
+	});
+
+	const htmlContent = await page.content();
+
+	const respose = htmlContent.replace('</pre></body></html>', '').trim();
+
+	const regex = /"data":\{"all":\{(.*?)\}/;
+	const match = htmlContent.match(regex);
+	console.log(match);
+	if (match && match[1]) {
+		// The matched portion contains your desired data
+		let jsonData = match[1].trim();
+		jsonData = jsonData.substring(0, jsonData.length - 1);
+
+		// console.log|(jsonData);
+
+	}
+
+	console.log | (JSON.stringify(respose));
+
+	await browser.close();
+
+	// const keys = Object.keys(jsonObject);
+	// if (keys.length > 0) {
+	//     const firstKey = keys[0];
+	//     jsonObject[firstKey] = "newValue"; // Replace with your new value
+	// }
+
+
+	res.json(respose);
+
 });
 
 
 app.get("/getTopModelsIndexes", async (req, res) => {
 	try {
-		
+
 		res.json(overallModels);
-	} catch (error) {}
+	} catch (error) { }
 });
 
 
@@ -210,8 +314,15 @@ app.get("/get-perfomance-index", async (req, res) => {
 	}
 });
 
+
+
+
 const port = 3002;
 // Start the server
 app.listen(port, () => {
 	console.log(`Server is running on http://localhost:${port}`);
 });
+
+
+
+
