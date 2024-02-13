@@ -338,7 +338,7 @@ app.get("/get-models", async (req, res) => {
 
 app.get('/get-chart', (req, res) => {
     const summary =  require('./market_index.json')
-    res.json({success:'true', data: summary});
+    res.json(summary);
 })
 
 
