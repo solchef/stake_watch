@@ -200,8 +200,6 @@ app.post("/insertModelsAndPrices", async (req, res) => {
 })
 
 
-
-
 app.get("/overallPriceHistory", async (req, res) => {
 	try {
 		res.json(overall);
@@ -253,14 +251,11 @@ app.get("/getModelIndexHistory", async (req, res) => {
 
 });
 
-
 app.get("/getTopModelsIndexes", async (req, res) => {
 	try {
-
 		res.json(overallModels);
 	} catch (error) { }
 });
-
 
 app.get("/market-index", async (req, res) => {
 	try {
@@ -318,25 +313,6 @@ app.get("/collections", async (req, res) => {
 	}
 });
 
-app.get("/get-brands", async (req, res) => {
-	// const options = {
-	// 	method: "GET",
-	// 	url: "https://chrono241.p.rapidapi.com/brands",
-	// 	headers: {
-	// 		"X-RapidAPI-Key": "be31f8812bmshaf5a1e9248a26f6p1aec23jsn676eaede7a19",
-	// 		"X-RapidAPI-Host": "chrono241.p.rapidapi.com",
-	// 	},
-	// };
-
-	const response = brands;
-	// console.log(response);
-
-	try {
-		res.json(response);
-	} catch (error) {
-		console.error(error);
-	}
-});
 
 app.get("/get-models", async (req, res) => {
 	const brand = req.query.brand;
@@ -353,12 +329,18 @@ app.get("/get-models", async (req, res) => {
 
 	try {
 		const response = await axios.request(options);
-		// console.log(response);
 		res.json([response.data]);
 	} catch (error) {
 		console.error(error);
 	}
 });
+
+
+app.get('/get-chart', (req, res) => {
+    const summary =  require('./market_index.json')
+    res.json({success:'true', data: summary});
+})
+
 
 app.get("/get-perfomance-index", async (req, res) => {
 	const options = {
@@ -380,124 +362,9 @@ app.get("/get-perfomance-index", async (req, res) => {
 	}
 });
 
-
-function filterData(data, months) {
-    if (months === "all") return data;
-    
-    const result = {};
-    const keys = Object.keys(data);
-    const lastKey = keys[keys.length - 1];
-    const cutoffDate = new Date(parseInt(lastKey) * 1000);
-    cutoffDate.setUTCMonth(cutoffDate.getUTCMonth() - months);
-    
-    for (const key in data) {
-        if (parseInt(key) * 1000 >= cutoffDate.getTime()) {
-            result[key] = data[key];
-        }
-    }
-    
-    return result;
-}
-
-function updateSummary(data) {
-    const values = Object.values(data);
-    // Update summary here
-}
-
-function mean(values) {
-    return values.reduce((a, b) => a + b, 0) / values.length;
-}
-
-function median(values) {
-    values.sort((a, b) => a - b);
-    const mid = Math.floor(values.length / 2);
-    return values.length % 2 !== 0 ? values[mid] : (values[mid - 1] + values[mid]) / 2;
-}
-
-function standardDeviation(values) {
-    const avg = mean(values);
-    const squareDiffs = values.map(value => Math.pow(value - avg, 2));
-    const avgSquareDiff = mean(squareDiffs);
-    return Math.sqrt(avgSquareDiff);
-}
-
-function variance(values) {
-    const avg = mean(values);
-    const squareDiffs = values.map(value => Math.pow(value - avg, 2));
-    return mean(squareDiffs);
-}
-
-function timestampToDate(timestamp) {
-    const date = new Date(timestamp * 1000);
-    return `${date.getUTCFullYear()}-${(date.getUTCMonth() + 1).toString().padStart(2, '0')}-${date.getUTCDate().toString().padStart(2, '0')}`;
-}
-
-
-app.post('/generateChart', (req, res) => {
-    // const inputDataString = req.data.dataInput;
-    const inputData = {"1609459200": 27237.744820078562,
-	"1609545600": 27253.25137642119,
-	"1609632000": 27267.776477971307,
-	"1609718400": 27270.928191378945,
-	"1609804800": 27293.68704879689,
-	"1609891200": 27280.302577250164,
-	"1609977600": 27306.487207402588,
-	"1610064000": 27361.199735591537,
-	"1610150400": 27386.47930793252,
-	"1610236800": 27422.489928141724,
-	"1610323200": 27433.950148234442,
-	"1610409600": 27460.107318951825,
-	"1610496000": 27465.86158783091,
-	"1610582400": 27476.33661825516,
-	"1610668800": 27503.728185095646,
-	"1610755200": 27541.425434253677,
-	"1610841600": 27542.455208643623,
-	"1610928000": 27492.080009105815,
-	"1611014400": 27456.40896833757,
-	"1611100800": 27475.399571551407,
-	"1611187200": 27477.167423185056,
-	"1611273600": 27506.540076134694,
-	"1611360000": 27552.203075934318,
-	"1611446400": 27565.033901917857,
-	"1611532800": 27603.3278212591,
-	"1611619200": 27641.26405938021,
-	"1611705600": 27675.895661832288}
-
-    // const filter = req.body.filter;
-    const filteredData = filterData(inputData, '3');
-
-    const chartData = {
-        labels: Object.keys(filteredData).map(timestampToDate),
-        datasets: [{
-            label: 'Data Points',
-            data: Object.values(filteredData),
-            fill: false,
-            borderColor: 'rgb(75, 192, 192)',
-            tension: 0.1
-        }]
-    };
-
-    res.send(chartData);
-
-	 
-
-    // Update summary
-   // chartFunctions.updateSummary(filteredData);
-});
-
-
-
-
-
-
-
-
 const port = 3002;
-// Start the server
 app.listen(port, () => {
 	console.log(`Server is running on http://localhost:${port}`);
 });
-
-
 
 
