@@ -2,7 +2,7 @@ const express = require("express");
 const fs = require("fs");
 const axios = require("axios");
 const puppeteer = require('puppeteer');
-
+const generateSummaryChart = require('./mainChart');
 
 // const SUPABASE_URL = 'https://aivkxljfsjpgrlyssvpy.supabase.co'
 // const SUPABASE_ANON_KEY = 'your-anon-key'
@@ -41,13 +41,15 @@ app.get("/", async (req, res) => {
 app.get("/getMarketIndexingSummary", async (req, res) => {
 	const type = req.query.page;
 	//deduce queries
-	// console.log(marketIndexes)
+	console.log(marketIndexes)
 	try {
 		res.json(marketIndexes);
 	} catch (error) {
 		console.error(error);
 	}
 });
+
+
 
 
 app.post("/updateMarketIndexingSummary", async (req, res) => {
@@ -257,6 +259,7 @@ app.get("/getTopModelsIndexes", async (req, res) => {
 	} catch (error) { }
 });
 
+
 app.get("/market-index", async (req, res) => {
 	try {
 		const jsonFileUrl = "";
@@ -329,16 +332,38 @@ app.get("/get-models", async (req, res) => {
 
 	try {
 		const response = await axios.request(options);
-		res.json([response.data]);
+		//res.json([response.data]);
 	} catch (error) {
 		console.error(error);
 	}
 });
 
 
+function getFirst30Items(obj, count) {
+    let first30Items = {};
+    let keys = Object.keys(obj);
+    for (let i = 0; i < count && i < keys.length; i++) {
+        let key = keys[i];
+        first30Items[key] = obj[key];
+    }
+    return first30Items;
+}
+
+
+  
+
 app.get('/get-chart', (req, res) => {
-    const summary =  require('./market_index.json')
-    res.json(summary);
+	const summary =  require('./market_index.json')
+
+	const chartData = {
+		 one: getFirst30Items(summary,30).data.all,
+		 three: getFirst30Items(summary,90).data.all,
+		 six: getFirst30Items(summary,90).data.all
+		}
+	
+	// console.log(chartData);
+	res.json(chartData);
+
 })
 
 
@@ -362,7 +387,7 @@ app.get("/get-perfomance-index", async (req, res) => {
 	}
 });
 
-const port = 3002;
+const port = 3000
 app.listen(port, () => {
 	console.log(`Server is running on http://localhost:${port}`);
 });
