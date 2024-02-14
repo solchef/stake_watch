@@ -9,8 +9,6 @@ const generateSummaryChart = require('./mainChart');
 
 // const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
-
-
 const {
 	scrapeBrands,
 	scrapeIndex,
@@ -22,7 +20,6 @@ const overall = require("./services/indexes/overallindex.json");
 const overallModels = require("./services/indexes/overallModels.json");
 const { time } = require("console");
 const chartFunctions = require("./chart-functions");
-// const bukkExport = require("./bulkimporter");
 
 const app = express();
 
@@ -427,7 +424,7 @@ app.get("indexes/get-market-perfomance-index", async (req, res) => {
 	}
 });
 
-app.get("/indexes/get-market-perfomance-index", async (req, res) => {
+app.get("/indexes/get-brand-perfomance-index", async (req, res) => {
 	const options = {
 		method: "GET",
 		url:
@@ -515,13 +512,13 @@ var demoData =
 	  "Jun"
 	]
   }
-
+e
   app.get("/demo-test", (req, res) => {
-	  res.send(data)
+	
+	  res.send(demoData)
   });
 
-
-
+e
 const port = 3000
 app.listen(port, () => {
 	console.log(`Server is running on http://localhost:${port}`);
