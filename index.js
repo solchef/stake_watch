@@ -350,22 +350,25 @@ function getFirst30Items(obj, count) {
 }
 
 
-  
+  function transformToSeries(data) {
+	for (let timestamp in data) {
+		seriesData.push({ Date: parseInt(timestamp), Price: data[timestamp] });
+	}
+	return series;
+}
+
 
 app.get('/get-chart', (req, res) => {
-	const summary =  require('./market_index.json')
-
-	const chartData = {
-		 one: getFirst30Items(summary,30).data.all,
-		 three: getFirst30Items(summary,90).data.all,
-		 six: getFirst30Items(summary,90).data.all
+	const summary =  require('./market_index.json');
+		const chartData = {
+		 one: transformToSeries(getFirst30Items(summary,30).data.all),
+		 three: transformToSeries(getFirst30Items(summary,90).data.all),
+		 six: transformToSeries(getFirst30Items(summary,90).data.all)
 		}
-	
-	// console.log(chartData);
+
 	res.json(chartData);
 
 })
-
 
 app.get("/get-perfomance-index", async (req, res) => {
 	const options = {
