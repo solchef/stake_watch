@@ -12,7 +12,7 @@ const scrapeProduct = async () => {
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
 
     try {
-        await page.goto('https://www.watchcharts.com/audemars-piguet/royal-oak/26240st');
+        await page.goto('https://watchcharts.com/watch_model/438-alpina-alpiner-4-al-525ss5aq6/overview');
         const htmlContent = await page.content();
 
         

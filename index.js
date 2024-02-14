@@ -20,6 +20,7 @@ const overall = require("./services/indexes/overallindex.json");
 const overallModels = require("./services/indexes/overallModels.json");
 const { time } = require("console");
 const chartFunctions = require("./chart-functions");
+// const bukkExport = require("./bulkimporter");
 
 const app = express();
 
@@ -373,7 +374,7 @@ app.get('/get-chart', (req, res) => {
 	const summary =  require('./market_index.json');
 		const chartData = {
 		 one: transformToSeries(getFirst30Items(summary,30).data.all),
-		 three: transformToSeries(getFirst30Items(summary,90).data.all),
+		 three: transformToSeries(getFirst30Items(summary,0).data.all),
 		 six: transformToSeries(getFirst30Items(summary,90).all)
 		}	
 

@@ -484,3 +484,25 @@ function stake_watch_shortcode($atts) {
 }
 add_shortcode('stake_watch', 'stake_watch_shortcode');
 ?>
+x
+// Add a menu item for the plugin settings
+function custom_chart_menu() {
+    add_options_page('Custom Chart Settings', 'Custom Chart', 'manage_options', 'custom-chart-settings', 'custom_chart_settings_page');
+}
+add_action('admin_menu', 'custom_chart_menu');
+
+// Settings page content
+function custom_chart_settings_page() {
+    ?>
+    <div class="wrap">
+        <h2>Custom Chart Settings</h2>
+        <!-- Add your settings form here -->
+    </div>
+    <?php
+}
+
+<!-- HTML code for your chart -->
+<div class="chart-container">
+    <!-- Chart canvas goes here -->
+</div>
+

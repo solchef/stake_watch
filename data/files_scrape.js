@@ -17,8 +17,10 @@ const jsonFileUrl = 'https://watchcharts.com/charts/brand.json';
     const $ = cheerio.load(processedHtml);
     const preContent = $('body > pre').text();
     // Parse the JSON content
-    const jsonData = JSON.parse(preContent);
-    console.log(jsonData)
+
+    console.log(preContent)
+    // const jsonData = JSON.parse(preContent);
+    // console.log(jsonData)
 
     const extractedData = {
       // Add your selectors here
