@@ -372,7 +372,6 @@ function getFirst30Items(obj, count) {
 // }
 
 
-
 app.get('/get-chart', (req, res) => {
 	const summary =  require('./market_index.json');
 		const chartData = {
@@ -385,7 +384,50 @@ app.get('/get-chart', (req, res) => {
 
 })
 
-app.get("/get-perfomance-index", async (req, res) => {
+https://www.chrono24.co.uk/api/priceindex/performance-chart.json?type=Collection&period=max	
+
+
+app.get("/indexes/get-collection-perfomance-index", async (req, res) => {
+	const options = {
+		method: "GET",
+		url:
+			"https://www.chrono24.co.uk/api/priceindex/performance-chart.json?type=Collection&period=max",
+		headers: {
+			"X-RapidAPI-Key": "be31f8812bmshaf5a1e9248a26f6p1aec23jsn676eaede7a19",
+			"X-RapidAPI-Host": "chrono241.p.rapidapi.com",
+		},
+	};
+
+	try {
+		const response = await axios.request(options);
+		// console.log(response);
+		res.json([response.data]);
+	} catch (error) {
+		console.error(error);
+	}
+});
+
+app.get("indexes/get-market-perfomance-index", async (req, res) => {
+	const options = {
+		method: "GET",
+		url:
+			"https://www.chrono24.co.uk/api/priceindex/performance-chart.json?type=Brannd&period=max",
+		headers: {
+			"X-RapidAPI-Key": "be31f8812bmshaf5a1e9248a26f6p1aec23jsn676eaede7a19",
+			"X-RapidAPI-Host": "chrono241.p.rapidapi.com",
+		},
+	};
+
+	try {
+		const response = await axios.request(options);
+		// console.log(response);
+		res.json([response.data]);
+	} catch (error) {
+		console.error(error);
+	}
+});
+
+app.get("/indexes/get-market-perfomance-index", async (req, res) => {
 	const options = {
 		method: "GET",
 		url:
@@ -404,6 +446,81 @@ app.get("/get-perfomance-index", async (req, res) => {
 		console.error(error);
 	}
 });
+
+var demoData = 
+{
+	"data": [
+	  {
+		"name": "Test 1",
+		"data": [
+		  34,
+		  85,
+		  95,
+		  74,
+		  56,
+		  24
+		]
+	  },
+	  {
+		"name": "Test 2",
+		"data": [
+		  54,
+		  45,
+		  21,
+		  56,
+		  45,
+		  45
+		]
+	  },
+	  {
+		"name": "Test 3",
+		"data": [
+		  45,
+		  34,
+		  65,
+		  45,
+		  76,
+		  45
+		]
+	  },
+	  {
+		"name": "Test 4",
+		"data": [
+		  87,
+		  56,
+		  45,
+		  87,
+		  65,
+		  78
+		]
+	  },
+	  {
+		"name": "Test 5",
+		"data": [
+		  87,
+		  56,
+		  45,
+		  43,
+		  56,
+		  76
+		]
+	  }
+	],
+	"category": [
+	  "Jan",
+	  "Feb",
+	  "Mar",
+	  "Apr",
+	  "May",
+	  "Jun"
+	]
+  }
+
+  app.get("/demo-test", (req, res) => {
+	  res.send(data)
+  });
+
+
 
 const port = 3000
 app.listen(port, () => {
