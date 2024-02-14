@@ -357,16 +357,31 @@ function getFirst30Items(obj, count) {
 	return series;
 }
 
+// // Make API call using wp_remote_get()
+// $response = wp_remote_get('https://api.example.com/data');
+
+// // Check if API call was successful
+// if (!is_wp_error($response) && $response['response']['code'] == 200) {
+//     // API call succeeded, parse response
+//     $body = wp_remote_retrieve_body($response);
+//     // Do something with $body (parsed response data)
+// } else {
+//     // API call failed, handle error
+//     $error_message = is_wp_error($response) ? $response->get_error_message() : 'Unknown error';
+//     echo "API call failed: $error_message";
+// }
+
+
 
 app.get('/get-chart', (req, res) => {
 	const summary =  require('./market_index.json');
 		const chartData = {
 		 one: transformToSeries(getFirst30Items(summary,30).data.all),
 		 three: transformToSeries(getFirst30Items(summary,90).data.all),
-		 six: transformToSeries(getFirst30Items(summary,90).data.all)
-		}
+		 six: transformToSeries(getFirst30Items(summary,90).all)
+		}	
 
-	res.json(chartData);
+	res.json(chartData.one);
 
 })
 
