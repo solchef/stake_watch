@@ -520,6 +520,69 @@ var demoData =
   });
 
 
+  // Assuming data is a simplified version of your dataset for demonstration
+const data = {
+    "1577836800": 619.56, // Jan 1, 2020
+    "1580515200": 617.28, // Feb 1, 2020
+    "1583020800": 615.79, // Mar 1, 2020
+    "1585699200": 613.34, // Apr 1, 2020
+    "1588291200": 611.88, // May 1, 2020
+    "1590969600": 610.42, // Jun 1, 2020
+    // More data points can be added
+};
+
+// Helper function to get month key for aggregation
+function getMonthKey(unixTimestamp, monthInterval) {
+    const date = new Date(unixTimestamp * 1000);
+    const year = date.getUTCFullYear();
+    let month = date.getUTCMonth() + 1; // getUTCMonth() returns months from 0-11
+    month = Math.ceil(month / monthInterval) * monthInterval - (monthInterval - 1);
+    month = month < 10 ? `0${month}` : `${month}`; // Ensure two-digit format
+    return `${year}-${month}`;
+}
+
+// Function to aggregate and average data
+function aggregateData(data, monthInterval) {
+    const aggregated = {};
+
+    Object.entries(data).forEach(([timestamp, price]) => {
+        const key = getMonthKey(timestamp, monthInterval);
+        if (!aggregated[key]) {
+            aggregated[key] = [];
+        }
+        aggregated[key].push(price);
+    });
+
+    return Object.entries(aggregated).map(([key, prices]) => {
+        const average = prices.reduce((sum, price) => sum + price, 0) / prices.length;
+        return { key, average };
+    });
+}
+
+app.get("/render-chart-request-data", (req, res) => {
+// const cat = req.url;
+// console.log(cat);
+const structuredData = {
+    "1Month": {
+        data: aggregateData(data, 1),
+        category: ['1 Month Interval']
+    },
+    "3Months": {
+        data: aggregateData(data, 3),
+        category: ['3 Months Interval']
+    },
+    "6Months": {
+        data: aggregateData(data, 6),
+        category: ['6 Months Interval']
+    }
+};
+
+console.log(structuredData["1Month"].data)
+
+res.send(structuredData["1Month"]);
+	
+});
+
 const port = 3000
 app.listen(port, () => {
 	console.log(`Server is running on http://localhost:${port}`);

@@ -7,7 +7,7 @@ const fs = require("fs");
 const path = require("path");
 
 
-const brandScrapeUrl = "https://watchcharts.com/watches/brand_index/patek+philippe";
+const brandScrapeUrl = "jsonResponse";
 
 async function scrapeIndex() {
 	const brand = "rolex";

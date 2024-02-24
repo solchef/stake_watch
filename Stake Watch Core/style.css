@@ -1,0 +1,17 @@
+.price-index-dashboard-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#chart-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#buttons-container {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Charts Dashboard</title>
+  <!-- Load Google AJAX API and Visualization controls package -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart', 'controls']});
+    google.charts.setOnLoadCallback(drawDashboard);
+
+    function drawDashboard() {
+      // Prepare your data (example data)
+      var data = google.visualization.arrayToDataTable([
+        ['Category', 'Value'],
+        ['Category A', 50],
+        ['Category B', 30],
+        ['Category C', 20],
+      ]);
+
+      // Create a dashboard instance
+      var dashboard = new google.visualization.Dashboard(
+          document.getElementById('dashboard_div'));
+
+      // Create a range slider control
+      var control = new google.visualization.ControlWrapper({
+        'controlType': 'NumberRangeFilter',
+        'containerId': 'control_div',
+        'options': {
+          'filterColumnLabel': 'Value'
+        }
+      });
+
+      // Create a pie chart
+      var chart = new google.visualization.ChartWrapper({
+        'chartType': 'PieChart',
+        'containerId': 'chart_div',
+        'options': {
+          'width': 400,
+          'height': 300,
+          'pieSliceText': 'label'
+        }
+      });
+
+      // Establish dependencies
+      dashboard.bind(control, chart);
+
+      // Draw your dashboard
+      dashboard.draw(data);
+    }
+  </script>
+</head>
+<body>
+  <!-- HTML skeleton for the dashboard -->
+  <div id="dashboard_div">
+    <div id="control_div"></div>
+    <div id="chart_div"></div>
+  </div>
+</body>
+</html>
