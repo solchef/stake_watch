@@ -459,51 +459,8 @@ var demoData =
 		  56,
 		  24
 		]
-	  },
-	  {
-		"name": "Test 2",
-		"data": [
-		  54,
-		  45,
-		  21,
-		  56,
-		  45,
-		  45
-		]
-	  },
-	  {
-		"name": "Test 3",
-		"data": [
-		  45,
-		  34,
-		  65,
-		  45,
-		  76,
-		  45
-		]
-	  },
-	  {
-		"name": "Test 4",
-		"data": [
-		  87,
-		  56,
-		  45,
-		  87,
-		  65,
-		  78
-		]
-	  },
-	  {
-		"name": "Test 5",
-		"data": [
-		  87,
-		  56,
-		  45,
-		  43,
-		  56,
-		  76
-		]
 	  }
+
 	],
 	"category": [
 	  "Jan",
@@ -550,7 +507,6 @@ function aggregateData(data, monthInterval) {
     });
 }
 
-// Function to filter data based on time range
 function filterData(data, rangeInDays) {
 	const now = new Date();
 	const startDate = new Date(now.getTime() - rangeInDays * 24 * 60 * 60 * 1000);
@@ -566,7 +522,29 @@ function filterData(data, rangeInDays) {
   
 	return filteredData;
   }
-
+  
+  // Function to format data for the chart
+  function formatChartData(data) {
+	const categories = []; // Dates
+	const values = []; // Values for Test 1
+  
+	data.forEach(item => {
+	  categories.push(item.date.toLocaleDateString()); // Assuming date format as string
+	  values.push(item.price);
+	});
+  
+	return {
+	  data: [
+		{
+		  name: '3M',
+		  data: values,
+		}
+	  ],
+	  category: categories,
+	};
+  }
+  
+  
 app.get(`/render-chart-request-data`, (req, res) => {
 // const cat = req.url;
 
@@ -575,39 +553,14 @@ app.get(`/render-chart-request-data`, (req, res) => {
   const type= req.query.type;
   const data = require(`./charts/history24.json`);
   let hist = data.data.all;
-//   const dates = Object.keys(hist).map(timestamp => new Date(timestamp * 1000));
-// const values = Object.values(hist);
-// console.log(dates);
+  const filteredData = filterData(hist, 90); // Filtered for 90 days
 
-const datasets = {
-	'3_months': filterData(hist, 90),
-	'6_months': filterData(hist, 180),
-	'1_year': filterData(data, 365),
-	'3_years': filterData(data, 3 * 365),
-	'6_years': filterData(data, 6 * 365),
-  };
+  // Format datasets for the chart
+  const formattedData = formatChartData(filteredData);
+  
 
 
-// const structuredData = {
-//     "1Month": {
-// 		data: values,
-//     },
-//     "3Months": {
-// 		data: values,
-//         category: dates
-//     },
-//     "6Months": {
-//         data: values,
-//         category: ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
-//     }
-// }
-
-let chartData = {};
-
-	// chartData = structuredData[`${type}Months`];
-
-
-res.send(datasets);
+res.send(formattedData);
 	
 });
 
