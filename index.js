@@ -386,6 +386,7 @@ function filterData(data, rangeInDays) {
   
 app.get(`/render-chart-request-data`, (req, res) => {
   const watch_id = req.query.watch_id;
+  console.log(req.query);
  // const request_watch = axios.get(`https://stakewatch.clients.dsgn.haus/wp-json/wp/v2/watches/${watch_id}`);
 //   const watch_details = request_watch.data;
   const data = require(`./charts/history24.json`);
