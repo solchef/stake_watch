@@ -20,6 +20,7 @@ const overall = require("./services/indexes/overallindex.json");
 const overallModels = require("./services/indexes/overallModels.json");
 const { time } = require("console");
 const chartFunctions = require("./chart-functions");
+const indexes = require("./services/overall-indexes");
 // const bukkExport = require("./bulkimporter");
 
 const app = express();
@@ -549,27 +550,40 @@ function aggregateData(data, monthInterval) {
     });
 }
 
-const data = demoData;
 app.get(`/render-chart-request-data`, (req, res) => {
 // const cat = req.url;
+
+// console.log(historical_data);
   const watch_id = req.query.watch_id;
-  console.log(watch_id);
+  const type= req.query.type;
+  const data = require(`./charts/history24.json`);
+  let hist = data.data.all;
+  const dates = Object.keys(hist).map(timestamp => new Date(timestamp * 1000));
+const values = Object.values(hist);
+console.log(dates);
+
+
 const structuredData = {
     "1Month": {
-        data: aggregateData(data, 1),
-        category: ['1 Month Interval']
+		data: values,
+        category: dates
     },
     "3Months": {
-        data: aggregateData(data, 3),
-        category: ['3 Months Interval']
+		data: values,
+        category: dates
     },
     "6Months": {
-        data: aggregateData(data, 6),
-        category: ['6 Months Interval']
+        data: values,
+        category: dates
     }
-};
+}
 
-res.send(structuredData);
+let chartData = {};
+
+	chartData = structuredData[`${type}Months`];
+
+
+res.send(chartData);
 	
 });
 
