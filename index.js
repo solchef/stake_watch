@@ -2,26 +2,16 @@ const express = require("express");
 const fs = require("fs");
 const axios = require("axios");
 const puppeteer = require('puppeteer');
-const generateSummaryChart = require('./mainChart');
-
-// const SUPABASE_URL = 'https://aivkxljfsjpgrlyssvpy.supabase.co'
-// const SUPABASE_ANON_KEY = 'your-anon-key'
-
-// const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
 const {
 	scrapeBrands,
 	scrapeIndex,
 	scrapeCollections,
 } = require("./watchcharts/scraping");
-// const brands = require("./brands");
+
 const marketIndexes = require("./services/overall-indexes");
 const overall = require("./services/indexes/overallindex.json");
 const overallModels = require("./services/indexes/overallModels.json");
-const { time } = require("console");
-const chartFunctions = require("./chart-functions");
-const indexes = require("./services/overall-indexes");
-// const bukkExport = require("./bulkimporter");
 
 const app = express();
 
@@ -40,45 +30,19 @@ app.get("/", async (req, res) => {
 app.get("/getMarketIndexingSummary", async (req, res) => {
 	const type = req.query.page;
 	//deduce queries
-	console.log(marketIndexes)
+	// //console.log(marketIndexes)
 	try {
 		res.json(marketIndexes);
 	} catch (error) {
-		console.error(error);
+		// //console.error(error);
 	}
 });
 
 
 
 
-app.post("/updateMarketIndexingSummary", async (req, res) => {
-	const brandsIndex = marketIndexes.brandIndexes;
-
-	// brandsIndex.forEach(async (brand) => {
-		// console.log(brand);
-		// const data = {
-		// 	market_value: brand.w25,
-		// 	"6m_change": brand.change,
-		// 	group_type: "brands",
-		// 	type_name: brand.Title,
-		// 	historical_data: [],
-		// };
-	     
-	// });
-
-	//  res.json({success: true, message: "Market Indexing Summary Updated"});
-	
-	updateMarketIndexingSummary
-	try {
-		  bukkExport();
-		res.json({ success: true, message: "Market Indexing Summary Updated" });
-	} catch (error) {
-		console.error("error", error);
-	}
-});
 
 
-// Function to transform Unix timestamp to human-readable date
 function transformTimestamps(data) {
 	const transformedData = {};
   
@@ -93,82 +57,12 @@ function transformTimestamps(data) {
 	  transformedData[day] = data[timestamp];
 	}
 
-	console.log(transformedData)
+	//console.log(transformedData)
   
 	return transformedData;
   }
 
 
-app.get("/getchartanalysis", async (req, res) => {
-
-	// Function to retrieve price data for the specified range of days
-function get_price_data_for_range($start_date, $end_date) {
-    // Query database using JetEngine custom queries
-    // Return price data for the specified range
-}
-
-// Function to calculate percentage change for each day
-function calculate_percentage_change($price_data) {
-    // Calculate percentage change for each day
-    // Return an array of percentage changes
-}
-
-// Function to calculate AAGR
-function calculate_aagr($price_data) {
-    // Calculate AAGR based on initial and final prices
-    // Return the calculated AAGR
-}
-
-// Function to calculate percentage change for 1M, 3M, and 6M periods
-function calculate_percentage_changes_for_periods($price_data) {
-    // Calculate prices for 1M, 3M, and 6M periods
-    // Calculate percentage changes for these periods
-    // Return an array of percentage changes
-}
-
-const chartData = req.query.chartData;
-//console.log(chartData);
-let sortedData = require('./market_index.json');
-
-  console.log(transformTimestamps(sortedData));
-
-   // Get the price data for the start and end of the year
-
-const oneMonthAgo = new Date();
-   oneMonthAgo.setMonth(new Date().getMonth);
-
-
-// Function to display the calculated metrics
-function display_calculated_metrics() {
-    // Retrieve price data for the specified range
-    $price_data = get_price_data_for_range('start_date', 'end_date');
-
-    // Calculate percentage change for each day
-    $percentage_changes = calculate_percentage_change($price_data);
-
-    // Calculate AAGR
-    $aagr = calculate_aagr($price_data);
-
-    // Calculate percentage changes for 1M, 3M, and 6M periods
-    $percentage_changes_periods = calculate_percentage_changes_for_periods($price_data);
-
-    // Display the calculated metrics
-    // You can format and output these values as needed
-
-return {
-	 "Percentage_changes: ": ($percentage_changes),
-     "AAGR: " : $aagr,
-     "1M Percentage Change:":   $percentage_changes_periods['1M'],
-     "3M Percentage Change:": $percentage_changes_periods['3M'],
-     "6M Percentage Change: " : $percentage_changes_periods['6M']
-}
-    
-}
-
-	// console.log(display_calculated_metrics())
-	res.json({success:true});
-
-});
 
 
 app.post("/insertModelsAndPrices", async (req, res) => {
@@ -227,17 +121,17 @@ app.get("/getModelIndexHistory", async (req, res) => {
 
 	const regex = /"data":\{"all":\{(.*?)\}/;
 	const match = htmlContent.match(regex);
-	console.log(match);
+	//console.log(match);
 	if (match && match[1]) {
 		// The matched portion contains your desired data
 		let jsonData = match[1].trim();
 		jsonData = jsonData.substring(0, jsonData.length - 1);
 
-		// console.log|(jsonData);
+		// //console.log|(jsonData);
 
 	}
 
-	console.log | (JSON.stringify(respose));
+	//console.log | (JSON.stringify(respose));
 
 	await browser.close();
 
@@ -276,7 +170,7 @@ app.get("/market-index", async (req, res) => {
 			res.send([JSON.parse(existingData)]);
 		}
 	} catch (error) {
-		console.log(error);
+		//console.log(error);
 		res.status(500).json({ success: false, error: "Internal Server Error" });
 	}
 });
@@ -288,21 +182,12 @@ app.get("/sync/brands", async (req, res) => {
 		const data = await scrapeBrands(jsonFileUrl);
 		res.json({ success: true, data });
 	} catch (error) {
-		console.log(error);
+		//console.log(error);
 		res.status(500).json({ success: false, error: error });
 	}
 });
 
-app.get("/oldbrands", async (req, res) => {
-	try {
-		const jsonFileUrl = "https://watchcharts.com/watches/brands"; // Replace with the actual URL
-		const data = await scrapeBrands(jsonFileUrl);
-		res.json({ success: true, data });
-	} catch (error) {
-		console.log(error);
-		res.status(500).json({ success: false, error: error });
-	}
-});
+
 
 app.get("/collections", async (req, res) => {
 	try {
@@ -310,7 +195,7 @@ app.get("/collections", async (req, res) => {
 		const data = await scrapeCollections(jsonFileUrl);
 		res.json({ success: true, data });
 	} catch (error) {
-		console.log(error);
+		//console.log(error);
 		res.status(500).json({ success: false, error: error });
 	}
 });
@@ -333,7 +218,7 @@ app.get("/get-models", async (req, res) => {
 		const response = await axios.request(options);
 		//res.json([response.data]);
 	} catch (error) {
-		console.error(error);
+		//console.error(error);
 	}
 });
 
@@ -356,20 +241,6 @@ function getFirst30Items(obj, count) {
 	return series;
 }
 
-// // Make API call using wp_remote_get()
-// $response = wp_remote_get('https://api.example.com/data');
-
-// // Check if API call was successful
-// if (!is_wp_error($response) && $response['response']['code'] == 200) {
-//     // API call succeeded, parse response
-//     $body = wp_remote_retrieve_body($response);
-//     // Do something with $body (parsed response data)
-// } else {
-//     // API call failed, handle error
-//     $error_message = is_wp_error($response) ? $response->get_error_message() : 'Unknown error';
-//     echo "API call failed: $error_message";
-// }
-
 
 app.get('/get-chart', (req, res) => {
 	const summary =  require('./market_index.json');
@@ -383,7 +254,7 @@ app.get('/get-chart', (req, res) => {
 
 })
 
-https://www.chrono24.co.uk/api/priceindex/performance-chart.json?type=Collection&period=max	
+
 
 
 app.get("/indexes/get-collection-perfomance-index", async (req, res) => {
@@ -399,10 +270,10 @@ app.get("/indexes/get-collection-perfomance-index", async (req, res) => {
 
 	try {
 		const response = await axios.request(options);
-		// console.log(response);
+		// //console.log(response);
 		res.json([response.data]);
 	} catch (error) {
-		console.error(error);
+		//console.error(error);
 	}
 });
 
@@ -419,10 +290,10 @@ app.get("indexes/get-market-perfomance-index", async (req, res) => {
 
 	try {
 		const response = await axios.request(options);
-		// console.log(response);
+		// //console.log(response);
 		res.json([response.data]);
 	} catch (error) {
-		console.error(error);
+		//console.error(error);
 	}
 });
 
@@ -439,47 +310,15 @@ app.get("/indexes/get-brand-perfomance-index", async (req, res) => {
 
 	try {
 		const response = await axios.request(options);
-		// console.log(response);
+		// //console.log(response);
 		res.json([response.data]);
 	} catch (error) {
-		console.error(error);
+		//console.error(error);
 	}
 });
 
-var demoData = 
-{
-	"data": [
-	  {
-		"name": "Test 1",
-		"data": [
-		  34,
-		  85,
-		  95,
-		  74,
-		  56,
-		  24
-		]
-	  }
-
-	],
-	"category": [
-	  "Jan",
-	  "Feb",
-	  "Mar",
-	  "Apr",
-	  "May",
-	  "Jun"
-	]
-  }
-
-  app.get("/demo-test", (req, res) => {
-	
-	  res.send(demoData)
-  });
 
 
-
-// Helper function to get month key for aggregation
 function getMonthKey(unixTimestamp, monthInterval) {
     const date = new Date(unixTimestamp * 1000);
     const year = date.getUTCFullYear();
@@ -489,7 +328,7 @@ function getMonthKey(unixTimestamp, monthInterval) {
     return `${year}-${month}`;
 }
 
-// Function to aggregate and average data
+
 function aggregateData(data, monthInterval) {
     const aggregated = {};
 
@@ -523,7 +362,7 @@ function filterData(data, rangeInDays) {
 	return filteredData;
   }
   
-  // Function to format data for the chart
+
   function formatChartData(data) {
 	const categories = []; // Dates
 	const values = []; // Values for Test 1
@@ -536,7 +375,7 @@ function filterData(data, rangeInDays) {
 	return {
 	  data: [
 		{
-		  name: '3M',
+		  name: 'Historical Price',
 		  data: values,
 		}
 	  ],
@@ -546,27 +385,152 @@ function filterData(data, rangeInDays) {
   
   
 app.get(`/render-chart-request-data`, (req, res) => {
-// const cat = req.url;
-
-// console.log(historical_data);
   const watch_id = req.query.watch_id;
-  const type= req.query.type;
+ // const request_watch = axios.get(`https://stakewatch.clients.dsgn.haus/wp-json/wp/v2/watches/${watch_id}`);
+//   const watch_details = request_watch.data;
   const data = require(`./charts/history24.json`);
   let hist = data.data.all;
-  const filteredData = filterData(hist, 90); // Filtered for 90 days
-
   // Format datasets for the chart
-  const formattedData = formatChartData(filteredData);
   
+ const type = req.query.type;
 
+ let filteredData = filterData(hist, 30);
+  switch (type) {
+	case '3M': filterData(hist, 90);
+	  break;
+	case '6M': filterData(hist, 180);
+	  break;
+	case '1Y': filterData(hist, 365);
+	  break;
+	case '3Y': filterData(hist, 3 * 365);
+	  break;
+	case '5Y': filterData(hist, 5 * 365);
+	  break;
+	default: filterData(hist, 30);
+  }
+
+//   const info = {
+// 		marketprice: watch_details.meta.watch-market-price,
+// 		retailprice: watch_details.meta.watch-retail-price,
+// 		brand: watch_details.brands[0],
+// 		collection: watch_details.collections[0],
+// 		model: watch_details.title.rendered,
+// 		percentage_difference: ((watch_details.meta.watch-market-price - watch_details.meta.watch-retail-price) / watch_details.meta.watch-retail-price) * 100,
+		
+//   }
+ 
+  const formattedData = formatChartData(filteredData);
 
 res.send(formattedData);
 	
 });
 
-const port = 3000
-app.listen(port, () => {
-	console.log(`Server is running on http://localhost:${port}`);
+app.post("/insertModelsAndPrices", async (req, res) => {
+
+	const data =
+	{
+        "slug": "grand-seiko-sbga407",
+        "status": "publish",
+        "type": "watches",
+        "link": "https://stakewatch.clients.dsgn.haus/watches/grand-seiko-sbga407/",
+        "title": {
+            "rendered": "SBGA407"
+        },
+        "content": {
+            "rendered": "<p>The Grand Seiko SBGA407 is a watch model from the Grand Seikobrand.As of February 2024, the average price of the Grand Seiko SBGA407 on the private sales market is $4,145, while you can expect to pay $4,283 from a secondary market dealer.</p>\n",
+            "protected": false
+        },
+        "featured_media": 2089,
+        "parent": 0,
+        "template": "",
+        "meta": {
+            "complication": [],
+            "styles": "Central seconds",
+            "references": [
+                {
+                    "reference": ""
+                }
+            ],
+            "features": [
+                "Steel",
+                "",
+                ""
+            ],
+            "bezel-material": [
+                "Steel"
+            ],
+            "crystal": [
+                "100",
+                "meters"
+            ],
+            "dial-color": [
+                "40.2mm"
+            ],
+            "case-material": [
+                "No",
+                "numerals"
+            ],
+            "lug-width": "",
+            "water-resistance": "12.8mm",
+            "movement-type": "Automatic",
+            "number-of-jewels": "72 hours",
+            "power-reserve": "",
+            "frequency": "30",
+            "watch-market-price": "4,145",
+            "watch-retail-price": "5800",
+            "watch-market-value": "",
+            "model-history-file": null,
+            "history": []
+        },
+        "brands": [
+            59
+        ],
+        "collections": []
+	}
+
+
+	 await axios.post('https://stakewatch.dubbydesign.com/wp-json/jet-rel/59', {
+		headers: {
+			'Authorization': 'Basic YXBpdXBkYXRlOjNnSzggVXpjdiBCY2lwIGFYVGogcXFQWCBlQXNk'
+		},
+		data
+
+	});
+})
+
+
+app.post("/updateMarketIndexingSummary", async (req, res) => {
+	const wordpressAuth = {
+		headers: {
+			Authorization:
+				"Basic" + "",
+		},
+	};
+
+	const brandsIndex = marketIndexes.brandIndexes;
+
+	brandsIndex.forEach(async (brand) => {
+		const data = {
+			market_value: brand.w25,
+			"6m_change": brand.change,
+			group_type: "brands",
+			type_name: brand.Title,
+			historical_data: [],
+		};
+	     
+	});
+
+	 res.json({success: true, message: "Market Indexing Summary Updated"});
+	
+	try {
+		  bukkExport();
+		res.json({ success: true, message: "Market Indexing Summary Updated" });
+	} catch (error) {
+		//console.error("error", error);
+	}
 });
+
+const port = 3000
+app.listen(port, () => {});
 
 
