@@ -566,7 +566,7 @@ console.log(dates);
 const structuredData = {
     "1Month": {
 		data: values,
-        category: dates
+        category: ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
     },
     "3Months": {
 		data: values,
@@ -574,16 +574,16 @@ const structuredData = {
     },
     "6Months": {
         data: values,
-        category: dates
+        category: ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
     }
 }
 
 let chartData = {};
 
-	chartData = structuredData[`${type}Months`];
+	// chartData = structuredData[`${type}Months`];
 
 
-res.send(chartData);
+res.send(structuredData);
 	
 });
 
