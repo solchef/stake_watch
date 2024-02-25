@@ -520,16 +520,6 @@ var demoData =
   });
 
 
-  // Assuming data is a simplified version of your dataset for demonstration
-const data = {
-    "1577836800": 619.56, // Jan 1, 2020
-    "1580515200": 617.28, // Feb 1, 2020
-    "1583020800": 615.79, // Mar 1, 2020
-    "1585699200": 613.34, // Apr 1, 2020
-    "1588291200": 611.88, // May 1, 2020
-    "1590969600": 610.42, // Jun 1, 2020
-    // More data points can be added
-};
 
 // Helper function to get month key for aggregation
 function getMonthKey(unixTimestamp, monthInterval) {
@@ -559,9 +549,11 @@ function aggregateData(data, monthInterval) {
     });
 }
 
-app.get("/render-chart-request-data", (req, res) => {
+const data = demoData;
+app.get(`/render-chart-request-data`, (req, res) => {
 // const cat = req.url;
-// console.log(cat);
+  const watch_id = req.query.watch_id;
+  console.log(watch_id);
 const structuredData = {
     "1Month": {
         data: aggregateData(data, 1),
@@ -577,11 +569,7 @@ const structuredData = {
     }
 };
 
-
-
-console.log(structuredData["1Month"].data)
-
-res.send(structuredData["1Month"]);
+res.send(structuredData);
 	
 });
 
