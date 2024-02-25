@@ -550,6 +550,23 @@ function aggregateData(data, monthInterval) {
     });
 }
 
+// Function to filter data based on time range
+function filterData(data, rangeInDays) {
+	const now = new Date();
+	const startDate = new Date(now.getTime() - rangeInDays * 24 * 60 * 60 * 1000);
+  
+	const filteredData = Object.entries(data)
+	  .filter(([timestamp]) => new Date(parseInt(timestamp) * 1000) >= startDate)
+	  .map(([timestamp, price]) => {
+		return {
+		  date: new Date(parseInt(timestamp) * 1000),
+		  price: price,
+		};
+	  });
+  
+	return filteredData;
+  }
+
 app.get(`/render-chart-request-data`, (req, res) => {
 // const cat = req.url;
 
@@ -558,32 +575,39 @@ app.get(`/render-chart-request-data`, (req, res) => {
   const type= req.query.type;
   const data = require(`./charts/history24.json`);
   let hist = data.data.all;
-  const dates = Object.keys(hist).map(timestamp => new Date(timestamp * 1000));
-const values = Object.values(hist);
-console.log(dates);
+//   const dates = Object.keys(hist).map(timestamp => new Date(timestamp * 1000));
+// const values = Object.values(hist);
+// console.log(dates);
+
+const datasets = {
+	'3_months': filterData(hist, 90),
+	'6_months': filterData(hist, 180),
+	'1_year': filterData(data, 365),
+	'3_years': filterData(data, 3 * 365),
+	'6_years': filterData(data, 6 * 365),
+  };
 
 
-const structuredData = {
-    "1Month": {
-		data: values,
-        category: ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
-    },
-    "3Months": {
-		data: values,
-        category: dates
-    },
-    "6Months": {
-        data: values,
-        category: ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
-    }
-}
+// const structuredData = {
+//     "1Month": {
+// 		data: values,
+//     },
+//     "3Months": {
+// 		data: values,
+//         category: dates
+//     },
+//     "6Months": {
+//         data: values,
+//         category: ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
+//     }
+// }
 
 let chartData = {};
 
 	// chartData = structuredData[`${type}Months`];
 
 
-res.send(structuredData);
+res.send(datasets);
 	
 });
 
