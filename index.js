@@ -395,19 +395,18 @@ app.get(`/render-chart-request-data`, (req, res) => {
   
  const type = req.query.type;
 
- let filteredData = filterData(hist, 30);
-  switch (type) {
-	case '3M': filterData(hist, 90);
-	  break;
-	case '6M': filterData(hist, 180);
-	  break;
-	case '1Y': filterData(hist, 365);
-	  break;
-	case '3Y': filterData(hist, 3 * 365);
-	  break;
-	case '5Y': filterData(hist, 5 * 365);
-	  break;
-	default: filterData(hist, 30);
+ let filteredData;
+
+  if(type === '1M') {
+	filteredData = filterData(hist, 30);
+  }else if(type === '3M') {
+	filteredData = filterData(hist, 90);
+  }else if(type === '6M') {
+	filteredData = filterData(hist, 180);
+  }else if(type === '1Y') {
+	filteredData = filterData(hist, 365);
+  }else{
+	filteredData = [];
   }
 
 //   const info = {
