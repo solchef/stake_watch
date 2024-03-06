@@ -358,6 +358,73 @@ add_action('save_post', function($post_id, $post, $update) {
 
 }, 10, 3);
 
+add_action('collections_add_form_fields', function ($taxonomy) {
+    $brands = get_terms(['taxonomy' => 'brands', 'hide_empty' => false]); // Replace 'brand_taxonomy' with your actual brand taxonomy slug
+    echo '<div class="form-field">
+        <label for="brand-selection">Select Brand</label>
+        <select name="brand_selection" id="brand-selection" class="postform">';
+    foreach ($brands as $brand) {
+        echo '<option value="' . esc_attr($brand->term_id) . '">' . esc_html($brand->name) . '</option>';
+    }
+    echo '</select>
+    </div>';
+});
+
+
+
+add_action('collections_edit_form_fields', function ($term) {
+    $brands = get_terms(array('taxonomy' => 'brands', 'hide_empty' => false));
+
+    echo '<tr class="form-field">
+        <th scope="row" valign="top"><label for="brand-selection">Select Brand</label></th>
+        <td>
+            <select name="brand_selection" id="brand-selection" class="postform">';
+    
+    foreach ($brands as $brand) {
+        echo '<option value="' . esc_attr($brand->term_id) . '">' . esc_html($brand->name) . '</option>';
+    }
+
+    echo '</select>
+        </td>
+    </tr>';
+});
+
+// Save the selected brand when the Collections term is saved
+add_action('edited_collections', function ($term_id) {
+    if (isset($_POST['brand_selection'])) {
+        // Save the selected brand ID as term meta or handle as needed
+        update_term_meta($term_id, 'associated_brand_id', absint($_POST['brand_selection']));
+    }
+});
+
+add_action('created_collections', 'update_brand_collection_relation');
+add_action('edited_collections', 'update_brand_collection_relation');
+
+function update_brand_collection_relation($term_id) {
+    if (isset($_POST['brand_selection'])) {
+        $brand_term_id = absint($_POST['brand_selection']);
+		
+        $relation_id = 2; // The ID of your relation between brands and collections
+        $relation = jet_engine()->relations->get_active_relations($relation_id);
+
+        if ($relation) {
+            $relation->set_update_context('parent');
+            $relation->update($brand_term_id, $term_id);
+        }
+    }else{
+		$brand_term = get_term_by('slug', $_POST['brand'], 'brands');
+		$term_id = $brand_term->term_id;
+		$relation_id = 2; // The ID of your relation between brands and collections
+        $relation = jet_engine()->relations->get_active_relations($relation_id);
+
+        if ($relation) {
+            $relation->set_update_context('parent');
+            $relation->update($brand_term_id, $term_id);
+        }
+	}
+}
+								  
+
 
 function fetch_watch_price_data_orig($watch_id) {
     global $wpdb;
